@@ -1,2 +1,3 @@
 # communication-management-system
 Multi-tenant enterprise platform for internal communication, task management, issue tracking, collaboration, and company administration.
+A production-ready multi-tenant enterprise platform built with Vue 3 and Go for centralized internal communication, employee collaboration, task management, issue and bug tracking, project management, announcements, meetings, document sharing, notifications, and organizational administration. The system enables companies to securely manage employees, departments, teams, communication, and work processes in one platform, with role-based access control, tenant data isolation, real-time messaging, audit logging, and scalable backend architecture.
