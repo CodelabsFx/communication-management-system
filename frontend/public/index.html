@@ -31,6 +31,7 @@
           <a href="/documents">Documents</a>
           <a class="cta" href="/login">Sign in</a>
         </nav>
+        <button id="theme-toggle" aria-label="Toggle theme" style="background:transparent;border:1px solid rgba(0,0,0,0.05);padding:0.35rem 0.6rem;border-radius:6px;cursor:pointer">🌙</button>
       </header>
 
       <main>
@@ -142,6 +143,28 @@
     <div id="app" aria-hidden="true"></div>
     <noscript style="position:fixed;left:12px;bottom:12px;background:#111;padding:8px 12px;border-radius:6px;color:#fff;font-size:0.9rem">JavaScript is required to run the app.</noscript>
 
+    <script>
+      // Theme toggle: persist in localStorage and toggle 'dark-theme' on documentElement
+      (function(){
+        const key = 'cs:theme';
+        const el = document.documentElement;
+        function applyTheme(t){
+          if(t === 'dark') el.classList.add('dark-theme'); else el.classList.remove('dark-theme');
+          const btn = document.getElementById('theme-toggle');
+          if(btn) btn.textContent = t === 'dark' ? '☀️' : '🌙';
+        }
+        const saved = localStorage.getItem(key) || (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+        applyTheme(saved);
+        document.addEventListener('click', function(e){
+          const t = e.target;
+          if(t && t.id === 'theme-toggle'){
+            const next = el.classList.contains('dark-theme') ? 'light' : 'dark';
+            applyTheme(next);
+            localStorage.setItem(key, next);
+          }
+        }, false);
+      })();
+    </script>
     <script type="module" src="/src/main.ts"></script>
   </body>
 </html>
