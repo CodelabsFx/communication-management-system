@@ -7,62 +7,7 @@
     <meta name="theme-color" content="#0f172a" />
     <title>Communication System</title>
 
-    <style>
-      :root{
-        --bg:#0f172a; /* slate-900 */
-        --card:#0b1220; /* darker */
-        --muted:#94a3b8; /* slate-400 */
-        --accent:#06b6d4; /* cyan-400 */
-        --accent-2:#7c3aed; /* purple */
-        --glass: rgba(255,255,255,0.04);
-        --max-width:1100px;
-        color-scheme: dark;
-      }
-      html,body{height:100%;margin:0;font-family:Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;}
-      body{background:linear-gradient(180deg,#071124 0%, rgba(7,17,36,1) 100%);color:#e6eef6;line-height:1.5;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;}
-      .container{max-width:var(--max-width);margin:0 auto;padding:2rem;}
-      header.site-header{display:flex;align-items:center;justify-content:space-between;padding:1rem 0}
-      .brand{display:flex;align-items:center;gap:0.75rem}
-      .logo{width:44px;height:44px;border-radius:8px;background:linear-gradient(135deg,var(--accent),var(--accent-2));display:flex;align-items:center;justify-content:center;font-weight:700;color:#021025}
-      .brand h1{font-size:1.125rem;margin:0}
-      nav.main-nav{display:flex;gap:1rem;align-items:center}
-      nav.main-nav a{color:var(--muted);text-decoration:none;padding:0.5rem 0.75rem;border-radius:6px}
-      nav.main-nav a:hover{background:var(--glass);color:#fff}
-      .cta{background:linear-gradient(90deg,var(--accent),var(--accent-2));padding:0.5rem 0.9rem;border-radius:8px;color:#021025;font-weight:600;text-decoration:none}
-
-      /* Hero */
-      .hero{display:grid;grid-template-columns:1fr 420px;gap:2.5rem;align-items:center;padding:4rem 0}
-      .hero h2{font-size:clamp(1.5rem,3vw,2.25rem);margin:0 0 1rem}
-      .hero p.lead{color:var(--muted);margin:0 0 1.25rem}
-      .features{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1rem;margin-top:1.5rem}
-      .feature{background:linear-gradient(180deg, rgba(255,255,255,0.02), transparent);padding:1rem;border-radius:8px;border:1px solid rgba(255,255,255,0.03)}
-      .feature h4{margin:0 0 0.5rem;font-size:0.95rem}
-      .feature p{margin:0;color:var(--muted);font-size:0.9rem}
-
-      /* Card with screenshot mock */
-      .mock-card{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));border-radius:12px;padding:1rem;border:1px solid rgba(255,255,255,0.04)}
-      .mock-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:0.75rem}
-      .mock-tabs{display:flex;gap:0.5rem}
-      .mock-tab{background:rgba(255,255,255,0.02);padding:0.35rem 0.6rem;border-radius:6px;color:var(--muted);font-size:0.85rem}
-      .mock-body{height:360px;border-radius:8px;background:linear-gradient(180deg, rgba(255,255,255,0.01), rgba(255,255,255,0.00));display:flex;flex-direction:column;gap:0.5rem;padding:0.75rem;overflow:hidden}
-      .msg{display:flex;gap:0.75rem;align-items:flex-start}
-      .msg .avatar{width:36px;height:36px;border-radius:999px;background:linear-gradient(90deg,var(--accent),var(--accent-2))}
-      .msg .content{background:rgba(255,255,255,0.02);padding:0.6rem;border-radius:8px;color:var(--muted);font-size:0.9rem}
-
-      /* Footer */
-      footer.site-footer{border-top:1px solid rgba(255,255,255,0.03);margin-top:3rem;padding-top:1.5rem;color:var(--muted)}
-      .footer-grid{display:flex;gap:2rem;flex-wrap:wrap}
-
-      /* Responsive */
-      @media (max-width:900px){
-        .hero{grid-template-columns:1fr;}
-        .mock-body{height:220px}
-        nav.main-nav{display:none}
-      }
-
-      /* Small util */
-      .muted{color:var(--muted)}
-    </style>
+    <link rel="stylesheet" href="/styles.css">
   </head>
   <body>
     <div class="container">
@@ -90,6 +35,7 @@
           <div>
             <h2>Bring conversations, work and teams together</h2>
             <p class="lead">Unified communication platform for companies — real-time messaging, task management, announcements and audit-ready logs. Built for teams that need reliability and scale.</p>
+            <p class="lead">Our platform provides REST & WebSocket APIs, company-level tenant isolation, role-based access control, audit-ready logging, S3-compatible attachments, and background workers for reliable delivery and integrations. Designed to scale from small teams to large enterprises, with an emphasis on security, observability, and extensibility.</p>
 
             <div class="features">
               <div class="feature">
